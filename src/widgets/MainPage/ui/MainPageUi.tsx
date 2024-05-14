@@ -3,14 +3,11 @@ import { observer } from "mobx-react";
 import { useLocalObservable } from "mobx-react-lite";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { motion } from "framer-motion";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import MenuItem from "@mui/material/MenuItem";
+import { TextField, Button, Typography, MenuItem } from "@mui/material";
 import { convertorStore } from "@src/app/store/convertorStore";
 import styles from "./mainPage.module.css";
 
-const MainPage = observer(() => {
+const MainPageUi = observer(() => {
   const localStore = useLocalObservable(() => convertorStore);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -39,9 +36,7 @@ const MainPage = observer(() => {
 
       <Formik
         initialValues={{ amount: "", fromCurrency: "USD", toCurrency: "EUR" }}
-        onSubmit={(values) => {
-          localStore.convertCurrency(values);
-        }}
+        onSubmit={(values) => localStore.convertCurrency(values)}
       >
         <Form>
           <Field
@@ -87,10 +82,8 @@ const MainPage = observer(() => {
               select
               className={styles.tocurrency}
               InputProps={{
-                // Apply styles to the TextField component
                 classes: {
-                  root: styles.textFieldRoot, // Add your custom class for the root element
-                  // Add more custom classes for different elements if needed
+                  root: styles.textFieldRoot,
                 },
               }}
             >
@@ -107,8 +100,6 @@ const MainPage = observer(() => {
             component="div"
             className={styles.errorMessage}
           />
-          <br />
-          <br />
           <Button variant="contained" type="submit">
             Конвертировать
           </Button>
@@ -128,4 +119,4 @@ const MainPage = observer(() => {
   );
 });
 
-export default MainPage;
+export default MainPageUi;

@@ -1,7 +1,7 @@
 import { RouteProps } from "react-router";
 import { AppRoutes, Routes } from "@src/shared/enums/AppRoutes";
-import MainPage from "@src/pages/MainPage/MainPage";
-import AdditionalPage from "@src/pages/AdditionalPage/AdditionalPage";
+import MainPage from "@src/pages/MainPage";
+import AdditionalPage from "@src/pages/AdditionalPage";
 
 export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: Routes.MAIN,

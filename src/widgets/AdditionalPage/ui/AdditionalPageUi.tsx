@@ -18,9 +18,9 @@ import {
 } from "@mui/material";
 import styles from "./table.module.css";
 
-const AdditionalPage = observer(() => {
+const AdditionalPageUi = observer(() => {
   const [baseCurrency, setBaseCurrency] = useState("USD");
-  const [searchQuery, setSearchQuery] = useState(""); // State for search query
+  const [searchQuery, setSearchQuery] = useState(""); 
 
   useEffect(() => {
     convertorStore.fetchCurrency({ currency: baseCurrency });
@@ -94,4 +94,4 @@ const AdditionalPage = observer(() => {
   );
 });
 
-export default AdditionalPage;
+export default AdditionalPageUi;
