@@ -1,30 +1,55 @@
-# React + TypeScript + Vite
+# Тестовое задание конвертер, написанное на React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Тестовое задание, написанное на React+ TS+Vite.
+Конвертер валют, содержит две страницы.
+Также проект использует архитектуру FSD
+https://feature-sliced.design/
 
-Currently, two official plugins are available:
+# Подробности о библиотеках
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Основные зависимости
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+@emotion/react и @emotion/styled: Предоставляют инструменты для работы с эмоциональными стилями в React.
+@mui/material: Компоненты Material-UI для React, предоставляющие готовые UI-элементы и компоненты.
+axios: HTTP-клиент для выполнения запросов к серверу.
+formik: Библиотека для управления формами в React.
+framer-motion: Библиотека для добавления анимаций в React-приложения.
+mobx и mobx-react: Инструменты для управления состоянием и реактивного программирования в React.
+react и react-dom: Основные библиотеки React для создания пользовательских интерфейсов.
+react-router и react-router-dom: Маршрутизация в React-приложениях.
+Зависимости разработки
+@types/node, @types/react и @types/react-dom: Объявления TypeScript для Node.js и React.
+@typescript-eslint/eslint-plugin и @typescript-eslint/parser: Плагин и парсер для поддержки TypeScript в ESLint.
+@vitejs/plugin-react: Плагин Vite для работы с React.
+eslint: Линтер JavaScript/TypeScript.
+eslint-plugin-react-hooks и eslint-plugin-react-refresh: Плагины ESLint для проверки хуков и обновлений React.
+typescript: TypeScript компилятор.
+vite: Быстрый сборщик и сервер для современных веб-приложений.
+Запуск проекта
+```
+
+Установите зависимости:
+
+```
+npm install
+```
+
+Запустите проект в режиме разработки:
+
+```
+npm run dev
+```
+
+При необходимости, выполните сборку для продакшена:
+
+```
+npm run build
+```
+
+Для предварительного просмотра собранного проекта, выполните:
+```
+npm run preview
+```
+Это всё! Теперь вы готовы начать разработку своего приложения на React с использованием TypeScript и Vite. Удачи! 🚀
