@@ -1,0 +1,38 @@
+.loaderWrapper {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // height: 100%;
+}
+
+.loadingOverlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: var(--gradient-bg);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.loader {
+    animation: rotateInfinity 1s infinite;
+
+    &.dark {
+        filter: grayscale(100%) brightness(70%) sepia(100%) saturate(1000%);
+        -webkit-filter: grayscale(100%) brightness(70%) sepia(100%) saturate(1000%);
+        -moz-filter: grayscale(100%) brightness(70%) sepia(100%) saturate(1000%);
+    }
+}
+
+@keyframes rotateInfinity {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

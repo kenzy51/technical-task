@@ -1,0 +1,9 @@
+.table {
+  width: 900px;
+}
+
+.top {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+}
